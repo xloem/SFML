@@ -36,7 +36,7 @@
 /// This file just includes the OpenGL (GL and GLU) headers,
 /// which have actually different paths on each system
 ////////////////////////////////////////////////////////////
-#if defined(SFML_SYSTEM_WINDOWS)
+#if defined(SFML_SYSTEM_WINDOWS) || defined(SFML_SYSTEM_CYGWIN)
 
     #include <windows.h>
     #include <GL/gl.h>

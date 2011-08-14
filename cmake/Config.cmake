@@ -2,6 +2,8 @@
 # detect the OS
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     set(WINDOWS 1)
+elseif(CMAKE_SYSTEM_NAME MATCHES "CYGWIN")
+    set(CYGWIN 1)
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(LINUX 1)
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")

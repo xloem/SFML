@@ -44,6 +44,12 @@
         #define NOMINMAX
     #endif
 
+#elif defined(__CYGWIN__)
+
+    // Cygwin
+    #define SFML_SYSTEM_CYGWIN
+    #define NOMINMAX
+
 #elif defined(linux) || defined(__linux)
 
     // Linux

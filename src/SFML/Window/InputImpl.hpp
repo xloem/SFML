@@ -30,7 +30,7 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/Config.hpp>
 
-#if defined(SFML_SYSTEM_WINDOWS)
+#if defined(SFML_SYSTEM_WINDOWS) || defined(SFML_SYSTEM_CYGWIN)
 
     #include <SFML/Window/Win32/InputImpl.hpp>
 

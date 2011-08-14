@@ -31,7 +31,7 @@
 #include <SFML/Config.hpp>
 
 // Windows' HWND is a typedef on struct HWND__*
-#if defined(SFML_SYSTEM_WINDOWS)
+#if defined(SFML_SYSTEM_WINDOWS) || defined(SFML_SYSTEM_CYGWIN)
     struct HWND__;
 #endif
 
@@ -41,7 +41,7 @@ namespace sf
 /// Define a low-level window handle type, specific to
 /// each platform
 ////////////////////////////////////////////////////////////
-#if defined(SFML_SYSTEM_WINDOWS)
+#if defined(SFML_SYSTEM_WINDOWS) || defined(SFML_SYSTEM_CYGWIN)
 
     // Window handle is HWND (HWND__*) on Windows
     typedef HWND__* WindowHandle;

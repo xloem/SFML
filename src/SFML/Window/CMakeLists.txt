@@ -34,7 +34,7 @@ set(SRC
 )
 
 # add platform specific sources
-if(WINDOWS)
+if(WINDOWS OR CYGWIN)
     set(SRC
         ${SRC}
         ${SRCROOT}/Win32/WglContext.cpp
@@ -106,6 +106,8 @@ endif()
 set(WINDOW_EXT_LIBS ${OPENGL_gl_LIBRARY})
 if(WINDOWS)
     set(WINDOW_EXT_LIBS ${WINDOW_EXT_LIBS} winmm gdi32)
+elseif(CYGWIN)
+    set(WINDOW_EXT_LIBS ${WINDOW_EXT_LIBS} winmm gdi32 opengl32)
 elseif(LINUX)
     set(WINDOW_EXT_LIBS ${WINDOW_EXT_LIBS} ${X11_X11_LIB} ${X11_Xrandr_LIB})
 elseif(MACOSX)

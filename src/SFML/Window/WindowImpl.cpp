@@ -32,7 +32,7 @@
 #include <algorithm>
 #include <cmath>
 
-#if defined(SFML_SYSTEM_WINDOWS)
+#if defined(SFML_SYSTEM_WINDOWS) || defined(SFML_SYSTEM_CYGWIN)
 
     #include <SFML/Window/Win32/WindowImplWin32.hpp>
     typedef sf::priv::WindowImplWin32 WindowImplType;
